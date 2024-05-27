@@ -1,12 +1,12 @@
 package soap.soap_consume;
 
+import com.srsanjay.employees.EmployeeDetails;
+import com.srsanjay.employees.GetEmployeeResponse;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import soap.soap_consume.client.EmployeeClient;
-import soap.soap_consume.wsdl.EmployeeDetails;
-import soap.soap_consume.wsdl.GetEmployeeResponse;
 
 @SpringBootApplication
 public class SoapConsumeApplication {

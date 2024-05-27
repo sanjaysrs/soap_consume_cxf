@@ -1,8 +1,8 @@
 package soap.soap_consume.client;
 
+import com.srsanjay.employees.GetEmployeeRequest;
+import com.srsanjay.employees.GetEmployeeResponse;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
-import soap.soap_consume.wsdl.GetEmployeeRequest;
-import soap.soap_consume.wsdl.GetEmployeeResponse;
 
 public class EmployeeClient extends WebServiceGatewaySupport {
 

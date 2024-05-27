@@ -11,7 +11,7 @@ public class EmployeeConfig {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("soap.soap_consume.wsdl");
+        marshaller.setContextPath("com.srsanjay.employees");
         return marshaller;
     }
 

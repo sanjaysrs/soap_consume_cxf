@@ -43,25 +43,25 @@
 			</plugin>
 
 			<plugin>
-				<groupId>com.sun.xml.ws</groupId>
-				<artifactId>jaxws-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<version>4.0.4</version>
 				<executions>
 					<execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>http://localhost:8080/ws/employees.wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
 						<goals>
-							<goal>wsimport</goal>
+							<goal>wsdl2java</goal>
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<packageName>soap.soap_consume.wsdl</packageName>
-					<wsdlUrls>
-						<wsdlUrl>http://localhost:8080/ws/employees.wsdl</wsdlUrl>
-					</wsdlUrls>
-					<sourceDestDir>${sourcesDir}</sourceDestDir>
-					<destDir>${classesDir}</destDir>
-					<extension>true</extension>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
